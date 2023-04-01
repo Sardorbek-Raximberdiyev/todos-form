@@ -5,26 +5,42 @@ const elHours = document.querySelector('.hours');
 const elMinutes = document.querySelector('.minutes');
 const elSeconds = document.querySelector('.seconds');
 
+
 function zero(num) {
   if(num >= 0 && num < 10) {
     return `0${num}`
   } else {
-    return num
+    return num;
   }
 }
+
+const nowMoth = [ 
+'January',
+'February ',
+'March',
+'April',
+'May ',
+'June',
+'July',
+'August',
+'September',
+'October',
+'November ',
+'December'
+]
 
 function newTime() {
   const elData = new Date();
 
   let years = elData.getFullYear();
-  let month = elData.getMonth() + 1;
+  let month = nowMoth[elData.getMonth()];
   let days = elData.getDate();
   let hours = elData.getHours();
   let minutes = elData.getMinutes();
   let seconds = elData.getSeconds();
 
   elYears.textContent = zero(years);
-  elMonth.textContent = zero(month);
+  elMonth.textContent = month;
   elDays.textContent = zero(days);
   elHours.textContent = zero(hours);
   elMinutes.textContent = zero(minutes);

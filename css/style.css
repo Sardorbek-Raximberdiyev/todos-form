@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'alarm clock';
+  src: url('../fonts/alarm\ clock.ttf');
+}
+
 
 :root {
   --accent-color: #ff7500;
+  --text-clokc: "Alarm clock", "Arial", sans-serif;
   --text-font: "Roboto", "Arial", sans-serif;
   --heading-font: "Roboto Condensed", "Roboto", "Arial", sans-serif;
 }
@@ -90,13 +95,21 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
   font-size: 40px;
   padding-top: 40px;
+  font-family: var(--text-clokc);
 }
 
 .data-time div{
   display: flex;
   align-items: center;
+}
+
+.month {
+  font-weight: 400;
+  font-family: var(--text-font);
+  font-style: italic;
 }
 
 .wrapper__title {
@@ -126,7 +139,7 @@ img {
 
 .create-message {
   position: absolute;
-  top: 42px;
+  top: 45px;
   left: 3px;
   font-style: italic;
   color: red;
@@ -141,7 +154,7 @@ img {
 
 .modal__create-message {
   position: absolute;
-  top: 42px;
+  top: 43px;
   left: 3px;
   font-style: italic;
   color: red;
@@ -262,6 +275,7 @@ img {
   width: 100%;
   border-radius: 5px;
   background-color: #fff;
+  overflow: hidden;
   z-index: 100;
 }
 
@@ -308,13 +322,12 @@ img {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  padding: 15px 10px;
+  padding: 25px 10px 15px;
 }
 
 .modal__input {
   width: 100%;
   margin-bottom: 20px;
-  margin-top: 5px;
   padding: 10px;
   border-radius: 3px;
   border: 2px solid #909199;

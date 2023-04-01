@@ -34,6 +34,7 @@ function newTime() {
 
   let years = elData.getFullYear();
   let month = nowMoth[elData.getMonth()];
+  let todoMonth = elData.getMonth();
   let days = elData.getDate();
   let hours = elData.getHours();
   let minutes = elData.getMinutes();
@@ -41,12 +42,13 @@ function newTime() {
 
   elYears.textContent = zero(years);
   elMonth.textContent = month;
+  // elMonth.textContent = month;
   elDays.textContent = zero(days);
   elHours.textContent = zero(hours);
   elMinutes.textContent = zero(minutes);
   elSeconds.textContent = zero(seconds);
 
-  return `${zero(hours)}:${zero(minutes)} / ${zero(days)}.${zero(month)}.${zero(years)}`
+  return `${zero(hours)}:${zero(minutes)} / ${zero(days)}.${zero(todoMonth)}.${zero(years)}`
 }
 
 newTime();

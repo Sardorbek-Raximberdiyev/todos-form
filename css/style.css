@@ -242,6 +242,7 @@ img {
 .todolist__btn {
   display: flex;
   padding: 0;
+  cursor: pointer;
 }
 
 .todolist__btn:not(:last-child) {
